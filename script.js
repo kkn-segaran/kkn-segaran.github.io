@@ -87,6 +87,7 @@ function showSlide(index) {
   document.getElementById('leftPictureName').textContent = forestPictureNames[index];
   document.getElementById('rightPictureName').textContent = forestPictureNames[index + 1];
 
+  /*
   // Update the content based on the current slide
   const slideContentElement = document.getElementById('slideContent');
   slideContentElement.innerHTML = `
@@ -103,6 +104,29 @@ function showSlide(index) {
     <h3>Location</h3>
     <div class="location">
       <a href="https://www.google.com/maps?q=${slideContent[index].location.latitude},${slideContent[index].location.longitude}" target="_blank">
+        ${slideContent[index].location.name}
+      </a>
+    </div>
+    <hr>
+  `;
+  */
+
+  // Update the content based on the current slide
+  const slideContentElement = document.getElementById('slideContent');
+  slideContentElement.innerHTML = `
+    <h2>${slideContent[index].title}</h2>
+    <hr>
+    <h3>History</h3>
+    <p>${slideContent[index].history}</p>
+    <hr>
+    <h3>Gallery</h3>
+    <div class="gallery">
+      ${slideContent[index].gallery.map(imageUrl => `<img src="${imageUrl}" alt="Image">`).join('')}
+    </div>
+    <hr>
+    <h3>Location</h3>
+    <div class="location">
+      <a href="#" onclick="openLocationLink(${slideContent[index].location.latitude}, ${slideContent[index].location.longitude})">
         ${slideContent[index].location.name}
       </a>
     </div>
@@ -156,5 +180,12 @@ for (let i = 0; i < slides.length; i++) {
   slides[i].style.backgroundImage = `url('${randomImageUrl}')`;
 }
 
+function openLocationLink(latitude, longitude) {
+  const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+  window.open(url, '_blank');
+}
+
+
 // Show the initial slide and mark the first circle as active
 showSlide(currentIndex);
+
