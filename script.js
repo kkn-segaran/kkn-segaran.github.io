@@ -1,91 +1,97 @@
-const slider = document.getElementById('slider');
-const slides = document.getElementsByClassName('slide');
-const sliderNavigation = document.getElementById('sliderNavigation');
-let currentIndex = 0;
+const slider = document.getElementById('slider')
+const slides = document.getElementsByClassName('slide')
+const sliderNavigation = document.getElementById('sliderNavigation')
+let currentIndex = 0
 
 const forestPictureNames = [
-  "Mystical Forest",
-  "Enchanted Woods",
-  "Whispering Pines",
-  "Magic Glen"
-];
+  'Mystical Forest',
+  'Enchanted Woods',
+  'Whispering Pines',
+  'Magic Glen',
+]
 
 const slideContent = [
   {
-    title: "Mystical Forest",
-    history: "This is the history of the Mystical Forest. It's a place of magic and mystery.",
+    title: 'Mystical Forest',
+    history:
+      "This is the history of the Mystical Forest. It's a place of magic and mystery.",
     gallery: [
-      "https://via.placeholder.com/200",
-      "https://via.placeholder.com/200",
-      "https://via.placeholder.com/200"
+      'https://via.placeholder.com/200',
+      'https://via.placeholder.com/200',
+      'https://via.placeholder.com/200',
     ],
     location: {
-      name: "Mystical Forest",
+      name: 'Mystical Forest',
       latitude: 40.7128,
-      longitude: -74.0060
-    }
+      longitude: -74.006,
+    },
   },
   {
-    title: "Enchanted Woods",
-    history: "The Enchanted Woods are full of wonder and enchantment. Many mystical creatures reside here.",
+    title: 'Enchanted Woods',
+    history:
+      'The Enchanted Woods are full of wonder and enchantment. Many mystical creatures reside here.',
     gallery: [
-      "https://via.placeholder.com/200",
-      "https://via.placeholder.com/200",
-      "https://via.placeholder.com/200"
+      'https://via.placeholder.com/200',
+      'https://via.placeholder.com/200',
+      'https://via.placeholder.com/200',
     ],
     location: {
-      name: "Enchanted Woods",
+      name: 'Enchanted Woods',
       latitude: 34.0522,
-      longitude: -118.2437
-    }
+      longitude: -118.2437,
+    },
   },
   {
-    title: "Whispering Pines",
-    history: "The Whispering Pines have a tale of ancient whispers and stories carried by the wind.",
+    title: 'Whispering Pines',
+    history:
+      'The Whispering Pines have a tale of ancient whispers and stories carried by the wind.',
     gallery: [
-      "https://via.placeholder.com/200",
-      "https://via.placeholder.com/200",
-      "https://via.placeholder.com/200"
+      'https://via.placeholder.com/200',
+      'https://via.placeholder.com/200',
+      'https://via.placeholder.com/200',
     ],
     location: {
-      name: "Whispering Pines",
+      name: 'Whispering Pines',
       latitude: 51.5074,
-      longitude: -0.1278
-    }
+      longitude: -0.1278,
+    },
   },
   {
-    title: "Magic Glen",
-    history: "The Magic Glen is known for its magical aura and mysterious happenings.",
+    title: 'Magic Glen',
+    history:
+      'The Magic Glen is known for its magical aura and mysterious happenings.',
     gallery: [
-      "https://via.placeholder.com/200",
-      "https://via.placeholder.com/200",
-      "https://via.placeholder.com/200"
+      'https://via.placeholder.com/200',
+      'https://via.placeholder.com/200',
+      'https://via.placeholder.com/200',
     ],
     location: {
-      name: "Magic Glen",
-      latitude: 52.5200,
-      longitude: 13.4050
-    }
-  }
-];
+      name: 'Magic Glen',
+      latitude: 52.52,
+      longitude: 13.405,
+    },
+  },
+]
 
 function showSlide(index) {
-  slider.style.transform = `translateX(-${index * 100}%)`;
-  currentIndex = index;
+  slider.style.transform = `translateX(-${index * 100}%)`
+  currentIndex = index
 
   // Update circles to indicate the current slide
   for (let i = 0; i < slides.length; i++) {
-    const circles = sliderNavigation.children;
+    const circles = sliderNavigation.children
     if (i === index) {
-      circles[i].classList.add('active');
+      circles[i].classList.add('active')
     } else {
-      circles[i].classList.remove('active');
+      circles[i].classList.remove('active')
     }
   }
 
   // Update the picture names based on the current slide
-  document.getElementById('leftPictureName').textContent = forestPictureNames[index];
-  document.getElementById('rightPictureName').textContent = forestPictureNames[index + 1];
+  document.getElementById('leftPictureName').textContent =
+    forestPictureNames[index]
+  document.getElementById('rightPictureName').textContent =
+    forestPictureNames[index + 1]
 
   /*
   // Update the content based on the current slide
@@ -112,7 +118,7 @@ function showSlide(index) {
   */
 
   // Update the content based on the current slide
-  const slideContentElement = document.getElementById('slideContent');
+  const slideContentElement = document.getElementById('slideContent')
   slideContentElement.innerHTML = `
     <h2>${slideContent[index].title}</h2>
     <hr>
@@ -121,71 +127,73 @@ function showSlide(index) {
     <hr>
     <h3>Gallery</h3>
     <div class="gallery">
-      ${slideContent[index].gallery.map(imageUrl => `<img src="${imageUrl}" alt="Image">`).join('')}
+      ${slideContent[index].gallery
+        .map(imageUrl => `<img src="${imageUrl}" alt="Image">`)
+        .join('')}
     </div>
     <hr>
     <h3>Location</h3>
     <div class="location">
-      <a href="#" onclick="openLocationLink(${slideContent[index].location.latitude}, ${slideContent[index].location.longitude})">
+      <a href="#" onclick="openLocationLink(${
+        slideContent[index].location.latitude
+      }, ${slideContent[index].location.longitude})">
         ${slideContent[index].location.name}
       </a>
     </div>
     <hr>
-  `;
+  `
 
   // Handle hiding/showing arrow buttons
-  const leftArrowBtn = document.querySelector('.arrow-btn.left');
-  const rightArrowBtn = document.querySelector('.arrow-btn.right');
+  const leftArrowBtn = document.querySelector('.arrow-btn.left')
+  const rightArrowBtn = document.querySelector('.arrow-btn.right')
   if (index === 0) {
-    leftArrowBtn.style.display = 'none';
+    leftArrowBtn.style.display = 'none'
   } else {
-    leftArrowBtn.style.display = 'block';
+    leftArrowBtn.style.display = 'block'
   }
 
   if (index === slides.length - 1) {
-    rightArrowBtn.style.display = 'none';
+    rightArrowBtn.style.display = 'none'
   } else {
-    rightArrowBtn.style.display = 'block';
+    rightArrowBtn.style.display = 'block'
   }
 }
 
 function prevSlide() {
   if (currentIndex > 0) {
-    showSlide(currentIndex - 1);
+    showSlide(currentIndex - 1)
   }
 }
 
 function nextSlide() {
   if (currentIndex < slides.length - 1) {
-    showSlide(currentIndex + 1);
+    showSlide(currentIndex + 1)
   }
 }
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') {
-    prevSlide();
+    prevSlide()
   } else if (e.key === 'ArrowRight') {
-    nextSlide();
+    nextSlide()
   }
-});
+})
 
 // Create circles for each slide
 for (let i = 0; i < slides.length; i++) {
-  const circle = document.createElement('div');
-  circle.classList.add('circle');
-  sliderNavigation.appendChild(circle);
+  const circle = document.createElement('div')
+  circle.classList.add('circle')
+  sliderNavigation.appendChild(circle)
 
   // Set a random forest background image for each slide
-  const randomImageUrl = `https://source.unsplash.com/1600x900/?forest,landscape&sig=${i}`;
-  slides[i].style.backgroundImage = `url('${randomImageUrl}')`;
+  const randomImageUrl = `https://source.unsplash.com/1600x900/?forest,landscape&sig=${i}`
+  slides[i].style.backgroundImage = `url('${randomImageUrl}')`
 }
 
 function openLocationLink(latitude, longitude) {
-  const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
-  window.open(url, '_blank');
+  const url = `https://www.google.com/maps?q=${latitude},${longitude}`
+  window.open(url, '_blank')
 }
 
-
 // Show the initial slide and mark the first circle as active
-showSlide(currentIndex);
-
+showSlide(currentIndex)
