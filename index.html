@@ -6,7 +6,8 @@
 
   <title>Home Page</title>
 
-  <link rel="stylesheet" href="src/css/styles.css">
+  <!-- <link rel="stylesheet" href="src/css/styles.css"> -->
+  <link rel="stylesheet" href="src/css/home.css">
   <link rel="stylesheet" href="src/css/nav.css">
   <link rel="stylesheet" href="src/css/gallery.css">
   <link
@@ -27,15 +28,16 @@
     <style>
       main{
   text-align: center; /* Center-align the title */
-  padding-top:80px;
+  /* padding-top:80px; */
+  padding-top:56px;
       }
     </style>
 
 <style>
   /* Customize the carousel height */
-  #video-carousel {
+  /* #video-carousel {
     height: 100vh;
-  }
+  } */
   /* Customize the video dimensions */
   .carousel-video {
     width: 100%;
@@ -126,7 +128,53 @@
         <!-- Add more carousel items with video and text as needed -->
       </div>
     </div>
+    <div class="container mt-5">
+      <div class="row">
+        <h2 class="research-title">Candi</h2>
+        <hr class="card-separator">
+
+        <div class="col-md-4">
+          <div class="card temple-card">
+            <img src="temple1.jpg" class="card-img-left" alt="Temple 1">
+            <div class="card-body">
+              <h5 class="card-title">Candi Jiwa</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Segaran I</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ultrices sapien. [...] </p>
+              <a href="page/venue/candiJiwa.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+          <!-- <hr class="card-separator"> -->
+        </div>
+        <!-- Repeat similar structure for other temple cards -->
+        <div class="col-md-4">
+          <div class="card temple-card">
+            <img src="temple1.jpg" class="card-img-left" alt="Temple 1">
+            <div class="card-body">
+              <h5 class="card-title">Candi Blandongan</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Segaran V</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ultrices sapien. [...] </p>
+              <a href="page/venue/candiBlandongan.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+          <!-- <hr class="card-separator"> -->
+        </div>
+        <div class="col-md-4">
+          <div class="card temple-card">
+            <img src="temple1.jpg" class="card-img-left" alt="Temple 1">
+            <div class="card-body">
+              <h5 class="card-title">Candi Serut</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Situs TLJ I</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ultrices sapien. [...] </p>
+              <a href="page/venue/candiSerut.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+          <!-- <hr class="card-separator"> -->
+        </div>
+      </div>
+    </div>
   </main>
+
+  
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -164,7 +212,10 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
-    <!-- <script> -->
+    <!-- <script>
+      // Initialize Bootstrap dropdown
+      var dropdown = new bootstrap.Dropdown(document.getElementById('venueDropdown'));
+    </script> -->
     <!-- Include Bootstrap and MDB JS -->
 <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
