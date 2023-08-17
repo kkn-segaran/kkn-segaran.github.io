@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact Page</title>
+  <title>Kontak Page</title>
 
   <link rel="stylesheet" href="src/css/styles.css">
   <link rel="stylesheet" href="src/css/nav.css">
@@ -78,17 +78,17 @@
     <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
           <div class="container">
-              <a class="navbar-brand" href="#">Your Logo</a>
+              <!-- <a class="navbar-brand" href="#">Your Logo</a> -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                      <!-- Inside the <ul class="navbar-nav"> element -->
+                  <ul class="navbar-nav mx-auto">
+                      <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                      <!-- Inside the <ul class="navbar-nav mx-auto"> element -->
                       <!-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="venueDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Venue
+                              Lokasi
                           </a>
                           <div class="dropdown-menu" aria-labelledby="venueDropdown">
                               <a class="dropdown-item dropdown-toggle" href="#" id="candiDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Candi</a>
@@ -97,24 +97,25 @@
                                   <a class="dropdown-item" href="#">Candi Blandongan</a>
                                   <a class="dropdown-item" href="#">Candi Serut</a>
                               </div>
-                              <a class="dropdown-item" href="#">Research</a>
+                              <a class="dropdown-item" href="#">Riwayat Penelitian</a>
                           </div>
                       </li> -->
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="venueDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Venue
+                          Lokasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="venueDropdown">
-                          <a class="dropdown-item" href="page/venue/candiJiwa.html">Candi Jiwa</a>
+                          <!-- <a class="dropdown-item" href="page/venue/candiJiwa.html">Candi Jiwa</a>
                         <a class="dropdown-item" href="page/venue/candiBlandongan.html">Candi Blandongan</a>
-                        <a class="dropdown-item" href="page/venue/candiSerut.html">Candi Serut</a>
+                        <a class="dropdown-item" href="page/venue/candiSerut.html">Candi Serut</a> -->
+                        <a class="dropdown-item" href="page/venue/candi.html">Candi</a>
                         <a class="dropdown-item" href="page/venue/museum.html">Museum</a>
                         </div>
                       </li>
                       <!-- "Research" Menu -->
-                      <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                      <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
-                      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                      <li class="nav-item"><a class="nav-link" href="research.html">Riwayat Penelitian</a></li>
+                      <li class="nav-item"><a class="nav-link" href="aboutUs.html">Tentang Kami</a></li>
+                      <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li> -->
                   </ul>
               </div>
           </div>
@@ -124,7 +125,7 @@
 
 <section class="contact">
   <div class="contact-form">
-      <h2>Contact Us</h2>
+      <h2>Kontak Us</h2>
       <form action="submit_contact.php" method="post"> <!-- Replace with your form action -->
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
