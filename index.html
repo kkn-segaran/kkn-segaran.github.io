@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Home Page</title>
+  <title>Beranda</title>
 
   <!-- <link rel="stylesheet" href="src/css/styles.css"> -->
   <link rel="stylesheet" href="src/css/home.css">
@@ -29,7 +29,7 @@
       main{
   text-align: center; /* Center-align the title */
   /* padding-top:80px; */
-  padding-top:56px;
+  /* padding-top:56px; */
       }
     </style>
 
@@ -62,51 +62,46 @@
   .carousel-subtitle {
     font-size: 1.2rem;
   }
+  nav{
+    margin: auto;
+  }
 </style>
 </head>
 <body>
 
 <header>
   <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent">
         <div class="container">
-            <a class="navbar-brand" href="#">Your Logo</a>
+            <!-- <a class="navbar-brand" href="#">Your Logo</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <!-- Inside the <ul class="navbar-nav"> element -->
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="venueDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Venue
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="venueDropdown">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="candiDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Candi</a>
-                            <div class="dropdown-menu" aria-labelledby="candiDropdown">
-                                <a class="dropdown-item" href="#">Candi Jiwa</a>
-                                <a class="dropdown-item" href="#">Candi Blandongan</a>
-                                <a class="dropdown-item" href="#">Candi Serut</a>
-                            </div>
-                            <a class="dropdown-item" href="#">Research</a>
-                        </div>
-                    </li> -->
-                    <li class="nav-item dropdown">
+                <!-- <ul class="navbar-nav mx-auto"> -->
+                <ul class="navbar-nav mx-auto">
+                    <!-- <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li> -->
+                    <li class="nav-link"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <!-- Inside the <ul class="navbar-nav mx-auto"> element -->
+                    <!-- <li class="nav-item dropdown"> -->
+                    <li class="nav-link dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="venueDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Venue
+                        Lokasi
                       </a>
                       <div class="dropdown-menu" aria-labelledby="venueDropdown">
-                        <a class="dropdown-item" href="page/venue/candiJiwa.html">Candi Jiwa</a>
+                        <!-- <a class="dropdown-item" href="page/venue/candiJiwa.html">Candi Jiwa</a>
                         <a class="dropdown-item" href="page/venue/candiBlandongan.html">Candi Blandongan</a>
-                        <a class="dropdown-item" href="page/venue/candiSerut.html">Candi Serut</a>
+                        <a class="dropdown-item" href="page/venue/candiSerut.html">Candi Serut</a> -->
+                        <a class="dropdown-item" href="page/venue/candi.html">Candi</a>
                         <a class="dropdown-item" href="page/venue/museum.html">Museum</a>
                       </div>
                     </li>
                     <!-- "Research" Menu -->
-                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="research.html">Riwayat Penelitian</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">Tentang Kami</a></li> -->
+                    <li class="nav-link"><a class="nav-link" href="research.html">Riwayat Penelitian</a></li>
+                    <li class="nav-link"><a class="nav-link" href="aboutUs.html">Tentang Kami</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li> -->
                 </ul>
             </div>
         </div>
@@ -139,8 +134,8 @@
             <div class="card-body">
               <h5 class="card-title">Candi Jiwa</h5>
               <h6 class="card-subtitle mb-2 text-muted">Segaran I</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ultrices sapien. [...] </p>
-              <a href="page/venue/candiJiwa.html" class="btn btn-primary">Learn More</a>
+              <p class="card-text">Candi Jiwa merupakan sebuah gundukan tanah seperti bukit kecil yang biasa disebut penduduk unur jiwa berbentuk lonjong. [...] </p>
+              <a href="page/venue/candi.html" class="btn btn-primary">Selengkapnya</a>
             </div>
           </div>
           <!-- <hr class="card-separator"> -->
@@ -152,8 +147,8 @@
             <div class="card-body">
               <h5 class="card-title">Candi Blandongan</h5>
               <h6 class="card-subtitle mb-2 text-muted">Segaran V</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ultrices sapien. [...] </p>
-              <a href="page/venue/candiBlandongan.html" class="btn btn-primary">Learn More</a>
+              <p class="card-text">Situs ini pertama kali di survei oleh  tim arkeologi FSUI pada tahun 1984,  antara tahun 1992 dan 2000 situs ini [...] </p>
+              <a href="page/venue/candi.html" class="btn btn-primary">Selengkapnya</a>
             </div>
           </div>
           <!-- <hr class="card-separator"> -->
@@ -165,7 +160,7 @@
               <h5 class="card-title">Candi Serut</h5>
               <h6 class="card-subtitle mb-2 text-muted">Situs TLJ I</h6>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ultrices sapien. [...] </p>
-              <a href="page/venue/candiSerut.html" class="btn btn-primary">Learn More</a>
+              <a href="page/venue/candi.html" class="btn btn-primary">Selengkapnya</a>
             </div>
           </div>
           <!-- <hr class="card-separator"> -->

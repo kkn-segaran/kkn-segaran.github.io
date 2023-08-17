@@ -379,3 +379,54 @@
       align-items: center;
 }
 
+}
+
+nav {
+  /* background-color: transparent !important;
+  box-shadow: none !important; */
+  /* background-color: rgba(0, 0, 0, ) !important;
+  box-shadow: none !important; */
+  /* background-color: rgba(138, 154, 91, 0.5) !important; */
+  background-color: rgba(138, 154, 91, 0) !important;
+  box-shadow: none !important;
+  
+}
+
+.navbar.transparent .navbar-nav .nav-link {
+  color: white !important; /* Change the text color as needed */
+}
+
+body {
+  /* background-color: rgba(138, 154, 91, 1) !important; */
+  /* background-color: rgba(128, 128, 128, 0.7) !important; */
+  background-color: rgba(222, 222, 222, 1) !important;
+}
+
+.research-title{
+  color: rgb(56,56,56);
+}
+
+.navbar.transparent {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+nav {
+  /* background-color: transparent !important;
+  box-shadow: none !important; */
+  /* background-color: rgba(0, 0, 0, ) !important;
+  box-shadow: none !important; */
+  /* background-color: rgba(138, 154, 91, 0.5) !important; */
+  background-color: rgba(138, 154, 91, 0) !important;
+  box-shadow: none !important;
+  
+}
+
+.navbar.transparent .navbar-nav .nav-link {
+  color: white !important; /* Change the text color as needed */
+}
+
+
+body {
+  background-color: rgba(222, 222, 222, 1) !important;
+}
