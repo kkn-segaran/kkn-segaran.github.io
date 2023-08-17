@@ -1,0 +1,10 @@
+@media (max-width: 769px) {
+  nav {
+      /* background-color: #8a9a5b; */
+      /* background-color: rgba(138/255, 154/255, 91/255, 1); */
+      /* background-color: rgb(138, 154, 91); */
+      /* background-color: rgba(138, 154, 91, 0.95); */
+      background-color: rgba(138, 154, 91, 1);
+      /* background-color: rgba(38, 39, 43, 1); */
+    }
+}

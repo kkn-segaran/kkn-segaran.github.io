@@ -1,0 +1,22 @@
+h3{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* text-align: center; */
+}
+
+.paragraph{
+  /* display:inline-block; */
+  /* width: 40px; */
+  /* margin-left: 20px; */
+  /* white-space:pre; */
+}
+
+@media (min-width: 769px) {
+  /* h3 {
+    margin-top: 100px;
+  } */
+
+  .firsth3 {
+    margin-top: 100px;
+  }
+}
